@@ -8,7 +8,7 @@ I wanted to turn simple arithmetic practice into an interactive exercise: genera
 
 ## How it works
 
-Choose the arithmetic operations and an operand limit, then answer questions during a 10-second round. Correct answers increase the score and add time. The high score is held in memory for the current page session.
+Choose the arithmetic operations and an operand limit, then answer questions during a 10-second round. Correct answers increase the score and add one second. The high score is saved in this browser. A round cannot start until at least one operation is selected, and the number limit only accepts whole numbers from 10 to 50.
 
 ## Run and check
 
@@ -16,17 +16,18 @@ Choose the arithmetic operations and an operand limit, then answer questions dur
 python -m http.server 8080
 ```
 
-Open http://localhost:8080. The page loads jQuery, Bootstrap, and Underscore from CDNs, so internet access is required.
+Open http://localhost:8080. The page loads jQuery and Bootstrap from CDNs, so internet access is required.
 
 Manual checks:
 
 - Select at least one operation and start a round.
 - Answer a generated question correctly and confirm the score and timer increase.
-- Let the timer expire and confirm the round stops.
-- Start another round and confirm the session high score is retained.
+- Let the timer expire and confirm the score is announced on the page.
+- Reload and confirm the high score is still there.
+- Clear every operation and confirm the game asks you to select one.
 
 These are review instructions, not a claim of automated test coverage.
 
 ## Scope and next steps
 
-This is an early JavaScript learning project using DOM events, timers, random question generation, and score state. There is no account system, persistent leaderboard, or backend. Guarding against an empty operation selection and adding deterministic timer tests are future improvements.
+This is an early JavaScript learning project using DOM events, timers, random question generation, and score state. There is no account system or shared leaderboard. The high score stays in local storage on this browser.

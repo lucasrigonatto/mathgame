@@ -8,10 +8,7 @@
 	<link href="style.css" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 	</script>
-	<script src="script.js">
-	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js">
-	</script>
+	<script src="script.js"></script>
     <title>10 Seconds Math Game</title>
 </head>
 
@@ -20,16 +17,17 @@
 		<div class="position-fixed" id="background">
 		</div>
 		<div class="d-none d-md-block position-fixed" id="scoreDisplay">
-			<p>Current Score: <span class="currentScore"></span></p>
-      <p>High Score: <span class="highScore"></span></p>
+			<p>Current Score: <span class="currentScore">0</span></p>
+      <p>High Score: <span class="highScore">0</span></p>
     </div>
   
     <div class="row justify-content-center" id="game">
       <div class="col-10 col-md-8">
         <h1 class="py-4 text-center">10 Seconds Math Game</h1>
         <div class="py-2 text-center">
-          <h2 id="timer"> 10 </h2>
+          <h2 id="timer">10</h2>
           <p>seconds left</p>
+          <p id="roundMessage" role="status"></p>
         </div>
       </div>
       <div class="col-10 col-md-8">
@@ -48,14 +46,14 @@
           <input id="times" type="checkbox" />
           <span> &times; </span>
           <input id="divide" type="checkbox" />
-          <span> &div; </span>
+          <span> ÷ </span>
         </div>
       </div>
 
       <div class="col-10 col-md-8">
         <div class="d-md-none py-3 text-center" id="xsScore">
-          <p>Current Score: <span class="currentScore"></span></p>
-          <p>High Score: <span class="highScore"></span></p>
+          <p>Current Score: <span class="currentScore">0</span></p>
+          <p>High Score: <span class="highScore">0</span></p>
         </div>
       </div>
 
